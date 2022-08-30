@@ -123,14 +123,6 @@ def main():
 		"User Account Status", "Other", "Manager Response (Drop Down)"]
 	dataValidation = ['Employed', 'Terminated', 'Changed Teams', 'Do Not Recognize']
 
-	#Identity Inventory Writer 
-	with open("IdentityInventory.csv", 'w', newline='') as csvFile:
-		writer = csv.writer(csvFile)
-		writer.writerow(headerNames)
-
-		for key in identities.keys():
-			writer.writerow(identities[key])
-
 	#Reconstruct the Inventory for manager review
 	managers = managerReviews(identities)
 
