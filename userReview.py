@@ -123,7 +123,7 @@ def main():
 		"User Account Status", "Other", "Manager Response (Drop Down)"]
 	dataValidation = ['Employed', 'Terminated', 'Changed Teams', 'Do Not Recognize']
 
-	#Identity Inventory Writer
+	#Identity Inventory Writer 
 	with open("IdentityInventory.csv", 'w', newline='') as csvFile:
 		writer = csv.writer(csvFile)
 		writer.writerow(headerNames)
