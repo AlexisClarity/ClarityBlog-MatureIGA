@@ -78,17 +78,21 @@ is made available - bit.ly/githubmatureiga.
     
         ManagerUserReview.py:
         
-            Purpose:
+            Purpose: Takes the file - identityInventory.json and converts it into individual excel files for each manager to review.
             
-            Input: 
+            Input: IdentityInventory.json
             
-            Output:
+            Output: N Excel (.xlsx) Spreadsheets.  
            
             Functions:
-                collectIdentitiesFromJson(fileName, managers):
-                writeManagerReviews(managers):
-                managersToJson(managers):
-                main():
+                collectIdentitiesFromJson(fileName, managers): Collects the json file and reconstructs the identity dictionary to user Manager as the key (instead of the identity identifier). 
+                writeManagerReviews(managers): Takes the newly restructured dictionary and writes it to individual excel sheets using XLSXWriter. 
+                    Name of the excel sheet is set on line 39 -> manager key + '.xlsx' (nothing fancy). 
+                    The headers are written in row 1. 
+                    The remaining data in the dictionary[manager] is written to that sheet. 
+                    Data validation is added to the final column on each row. It allows managers to click and select their response to each item instead of typing it in. It makes the last script possible. If you want to change the available responses, you need to update UserReviewCombiner.py lines 46 through 94. 
+                managersToJson(managers): json.dumps the manager dictionary we have been working with to a json file titled managers.json. 
+                main(): Instantiates the managers dictionary and initiates the rest of the functions. 
         
     
         UserReviewCombiner.py:
