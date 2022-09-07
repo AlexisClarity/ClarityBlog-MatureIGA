@@ -31,10 +31,13 @@ is made available - https://share.hsforms.com/1XCC7nl4KQcuTbA9uaV2j4Acz53j.
         Pandas - https://pypi.org/project/pandas/
     
     Notes: 
-    
         IdentityInventory.py:
         
             Purpose:
+            
+            Input: 
+            
+            Output:
         
             Functions:
                 collectFileNames():
@@ -43,7 +46,11 @@ is made available - https://share.hsforms.com/1XCC7nl4KQcuTbA9uaV2j4Acz53j.
     
         ManagerUserReview.py:
         
-            Purpose: 
+            Purpose:
+            
+            Input: 
+            
+            Output:
            
             Functions:
                 collectIdentitiesFromJson(fileName, managers):
@@ -55,6 +62,10 @@ is made available - https://share.hsforms.com/1XCC7nl4KQcuTbA9uaV2j4Acz53j.
         UserReviewCombiner.py:
         
             Purpose:
+                        
+            Input: 
+            
+            Output:
            
             Functions:
                 readExcelReturnDict(fileName, responseDict):
