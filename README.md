@@ -4,7 +4,7 @@ Welcome to the Clarity Blog - Mature IGA Repo!
 
 A few things before we get started. 
 
-1. If you stumbled upon this repo outside of the Blog, Welcome! This repo is directly tied to a 
+1. If you stumbled upon this repo outside of the blog, Welcome! This repo is directly tied to a 
 blog series that can be found here - https://claritysecurity.io/how-to-build-a-mature-iga/ 
 
 2. The purpose of the blog and repo is to assist companies in developing an Identity Governance
