@@ -97,16 +97,21 @@ is made available - bit.ly/githubmatureiga.
     
         UserReviewCombiner.py:
         
-            Purpose:
+            Purpose: Combine the manager responses from the disparate excel sheets into a master book + sheets separated by required action.  
                         
-            Input: 
+            Input: Excel sheets from each reviewer & managers.json
             
-            Output:
+            Output: MasterUserreviewResponse.xlsx -> a single excel book with every response and required actions. 
            
             Functions:
-                readExcelReturnDict(fileName, responseDict):
-                loadManagerJson(fileName):
-                createSheetsAddHeaders(headerNames, workbook, sheetInfo):
-                populateSheet(workbook, sheetName, manager, row, col, content):
-                createExcel(managers):
-                main():
+                readExcelReturnDict(fileName, responseDict): Using Pandas read_excel, DataFrame and to_dict capabilities, we ingest each excel sheet as a dataframe, and convert it to a temporary python dictionary. 
+                loadManagerJson(fileName): collect the names of each excel sheet via the keys in the file managers.json.
+                createSheetsAddHeaders(headerNames, workbook, sheetInfo): This creates the individual sheets and adds the headers in the master excel book.
+                populateSheet(workbook, sheetName, manager, row, col, content): Writes the content to the various pages. XLSXWriter cannot write lists, on line 34 we convert the list into a string delimited by '&'.
+                createExcel(managers): Function to create the excel.
+                    Lines 42 - 49 Establish the headers and a dictionary to know the next row to write on (sheetInfo line 46).
+                    Lines 52 - 54 Create the excel book. 
+                    Lines 56 - 70 Reconstruct the manager dictionary to use user's name as the key. 
+                    Lines 72 - 81 Evaluate the managers' responses and identify any conflicting responses. 
+                    Lines 83 - 94 Write the users to master and the correct remediation page. 
+                main():coordinate. 
